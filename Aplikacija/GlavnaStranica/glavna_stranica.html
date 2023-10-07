@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="glavna_stranica.css">
+    <link rel="shortcut icon" href="../ico/mat.ico" type="image/x-icon">
+    <title>Matrice | početna stranica</title>
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+<div class="kontejner">
+    <div class="nav">
+        <h2>Navigacija</h2>
+        <ul>
+            <li><a href="#" data-naziv="matrice"><i class="fas fa-calculator-simple">M</i>Matrice</a></li>
+            <li><a href="#" data-naziv="sabiranje"><i class="fas fa-plus"></i>Sabiranje</a></li>
+            <li><a href="#" data-naziv="oduzimanje"><i class="fas fa-minus"></i>Oduzimanje</a></li>
+            <li><a href="#" data-naziv="mnozenje"><i class="fas fa-times"></i>Množenje</a></li>
+            <li><a href="#" data-naziv="determinanta"><i class="fas fa-wave-square"></i>Determinanta</a></li>
+            <li><a href="#" data-naziv="transponacija"><i class="fas fa-exchange-alt"></i>Transponacija</a></li>
+            <li><a href="#" data-naziv="kalkulator"><i class="fas fa-calculator"></i>Kalkulator</a></li>
+        </ul> 
+    </div>
+    <div class="glavno">
+        <div class="header">
+            <div>Matrice</div>
+            <div>
+                <span id="jedan" class="brojn">1</span>
+                <span id="dva" class="brojp">2</span>
+                <span id="tri" class="brojp">3</span>
+                <span id="cetiri" class="brojn">4</span>
+                <span id="pet" class="brojp">5</span>
+            </div>
+            
+        </div>  
+        <div class="info">
+            <div class="dodatneInfo" id="matrice">
+                <div>U matematici, matrica je pravougla tablica brojeva, ili općenito, tablica koja se sastoji od apstraktnih objekata koji se mogu sabirati, oduzimati i množiti.
+                    Matrice se koriste za opisivanje linearnih jednačina, za praćenje koeficijenata linearnih transformacija, kao i za čuvanje podataka koji ovise od dva parametra. Matrice se mogu sabirati, oduzimati, množiti i razlagati na razne načine, što ih čini ključnim konceptom u linearnoj algebri i teoriji matrica.</div>
+        
+                  <div>Horizontalne se linije u matrici zovu redovi, a vertikalne kolone matrice. Matrica s <i>m</i> redova i <i>n</i> kolona se naziva  <i>m</i>-sa-<i>n</i> matricom (kaže se i zapisuje da je formata m&times;n), a <i>m</i> i <i>n</i> su dimenzije matrice.
+        
+                    Član matrice <i>A</i> koji se nalazi u <i>i</i>-tom redu i <i>j</i>-toj koloni se naziva (<i>i,j</i>)-ti član matrice <i>A</i>. Ovo se zapisuje kao a<sub>i,j</sub> ili A[<i>i,j</i>]. Uvijek se prvo naznačuje red, pa kolona.
+                    
+                    Često se piše A : = (a<sub>i,j</sub>)<sub>m&times;n</sub>  kako bi se definirala m &times; n matrica <i>A</i> čiji su članovi a<sub>i,j</sub> za sve 1 ≤ i ≤ m i 1 ≤ j ≤ n. Međutim, konvencija da <i>i</i> i <i>j</i> počinju od 1 nije univerzalna: neki programski jezici započinju od nule, u kom slučaju imamo 0 ≤ i ≤ m - 1 i 0 ≤ j ≤ n - 1.
+                    
+                    Matricu čija je jedna od dimenzija jednaka jedinici često nazivamo vektorom, i interpretiramo je kao element realnog koordinatnog prostora. 1 &times; n matrica (jedan red i n kolona) se naziva vektor red, a m &times; 1 matrica (jedna kolona i m redova) se naziva vektor kolona.</div>
+                    <br>
+            </div>
+
+            <div class="dodatneInfo" id="sabiranje">
+                <h2 id="ha2">Sabiranje matrica</h2>
+                <br>
+                <div>Sabiranje matrica je definirano samo za matrice istih dimenzija. Ako su date matrice <i>A</i> i <i>B</i>, dimenzija <i>m</i>-sa-<i>n</i>, njihov zbir <i>A</i> + <i>b</i> je <i>m</i>-sa-<i>n</i> matrica, izračunata sabiranjem odgovarajućih elemenata (t.j. (A + B)[i, j] = A[i, j] + B[i, j] ). Na primjer:
+                    <br><br>
+                    <div id="matrica">
+                        <table class="matrica">
+                            <tr>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+
+                        <div id="znak">+</div>
+
+                        <table class="matrica">
+                            <tr>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>5</td>
+                            </tr>
+                        </table>
+
+                        <div id="jednako">=</div>
+
+                        <table class="matrica">
+                            <tr>
+                                <td>1 + 2</td>
+                                <td>3 + 1</td>
+                                <td>2 + 6</td>
+                            </tr>
+                            <tr>
+                                <td>5 + 8</td>
+                                <td>1 + 9</td>
+                                <td>8 + 3</td>
+                            </tr>
+                            <tr>
+                                <td>3 + 1</td>
+                                <td>2 + 1</td>
+                                <td>0 + 5</td>
+                            </tr>
+                        </table>
+
+                        <div id="jednako">=</div>
+
+                        <table class="matrica">
+                            <tr>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>10</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>5</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="dodatneInfo" id="oduzimanje">
+                <h2 id="ha2">Oduzimanje matrica</h2>
+                <br>
+                <div>Oduzimanje matrica je definirano samo za matrice istih dimenzija. Ako su date matrice <i>A</i> i <i>B</i>, dimenzija <i>m</i>-sa-<i>n</i>, njihova razlika <i>A</i> + <i>b</i> je <i>m</i>-sa-<i>n</i> matrica, izračunata oduzimanjem odgovarajućih elemenata (t.j. (A - B)[i, j] = A[i, j] - B[i, j] ). Na primjer:
+                    <br><br>
+                    <div id="matrica">
+                        <table class="matrica">
+                            <tr>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+
+                        <div id="znak">-</div>
+
+                        <table class="matrica">
+                            <tr>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>5</td>
+                            </tr>
+                        </table>
+
+                        <div id="jednako">=</div>
+
+                        <table class="matrica">
+                            <tr>
+                                <td>1 - 2</td>
+                                <td>3 - 1</td>
+                                <td>2 - 6</td>
+                            </tr>
+                            <tr>
+                                <td>5 - 8</td>
+                                <td>1 - 9</td>
+                                <td>8 - 3</td>
+                            </tr>
+                            <tr>
+                                <td>3 - 1</td>
+                                <td>2 - 1</td>
+                                <td>0 - 5</td>
+                            </tr>
+                        </table>
+
+                        <div id="jednako">=</div>
+
+                        <table class="matrica">
+                            <tr>
+                                <td>-1</td>
+                                <td>2</td>
+                                <td>-4</td>
+                            </tr>
+                            <tr>
+                                <td>-3</td>
+                                <td>-8</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>-5</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+                </div>
+
+                <div class="dodatneInfo" id="mnozenje">
+                    <h2 id="ha2">Množenje matrica</h2>
+                    <br>
+                    <div>Množenje dvije matrice je dobro definirano samo ako je broj kolona lijeve matrice jednak broju redova desne matrice. Za takve dvije matrice se kaže da su ulančanih dimenzija. Ako je A matrica dimenzija <i>m</i>-sa-<i>n</i>, a B je matrica dimenzija <i>n</i>-sa-<i>p</i>, tada je njihov proizvod AB matrica dimenzija <i>m</i>-sa-<i>p</i> (<i>m</i> redova, <i>p</i> kolona) dat formulom:</div>
+                    <div id="formula">(<i>AB</i>)[<i>i,j</i>] = <i>A[i,1]B[1,j] + A[i,2]B[2,j] +...+ A[i,n]B[n,j]</i></div>
+                    <div>Na primjer: </div>
+                    <div>
+                        <div id="matrica">
+                            <table class="matrica">
+                                <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>-1</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                </tr>
+                            </table>
+    
+                            <div id="znak">&bull;</div>
+    
+                            <table class="matrica">
+                                <tr>
+                                    <td>3</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                </tr>
+                            </table>
+    
+                            <div id="jednako">=</div>
+    
+                            <table class="matrica">
+                                <tr>
+                                    <td>(1 &middot; 3 + 0 	&middot; 2 + 2 &middot; 1)</td>
+                                    <td>(1 &middot; 1 + 0 	&middot; 1 + 2 &middot; 0)</td>
+                                </tr>
+                                <tr>
+                                    <td>((-1) &middot; 3 + 3 &middot; 2 + 1 &middot; 1)</td>
+                                    <td>((-1) &middot; 1 + 3 &middot; 1 + 1 &middot; 0)</td>
+                                </tr>
+                            </table>
+    
+                            <div id="jednako">=</div>
+    
+                            <table class="matrica">
+                                <tr>
+                                    <td>5</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>2</td>
+                                </tr>
+                            </table>
+    
+                        </div>
+                    </div>
+            </div>
+
+            <div class="dodatneInfo" id="determinanta">
+                <h2 id="ha2">Determinanta</h2>
+                <br>
+                <div>U matematici je determinanta skalar svojstven kvadratnoj matrici koji ima mnoga korisna svojstva u linearnoj algebri. Označava se obično s <b>det</b> A ili |A|. Determinanta matrice koja je zadana svojim elementima može se označiti tako da se umjesto uglatih zagrada matrice napišu ravne zagrade determinante.</div>
+            </div>
+            
+            <div class="dodatneInfo" id="transponacija">
+                <h2 id="ha2">Transponacija</h2>
+                <br>
+                <div>Transponirana matrica, matrice <i>m</i>-sa-<i>n</i>, <i>A</i> je <i>n</i>-sa-<i>m</i> matrica A<sup>tr</sup> (nekad se zapisuje i kao A<sup>T</sup> ili <sup>t</sup>A), koja nastaje pretvaranjem kolone u redove i redova u kolone, to jest A<sup>tr</sup><sub>[i, j]</sub> = A<sub>[j, i]</sub> za svaki <i>i</i>  i  <i>j</i>. Ako <i>A</i> predstavlja linearno preslikavanje u odnosu na dvije baze, tada matrica A<sup>tr</sup> predstavlja linearno preslikavanje u odnosu na dualne baze</div>
+                <div>Primjer: </div>
+                <div>
+                    <div id="matrica">
+                        <table class="matrica">
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                            </tr>
+                        </table>
+
+                        <div id="jednako">&#8594;</div>
+
+                        <table class="matrica">
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>6</td>
+                                <td>9</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="glavna_stranica.js"></script>
+</body>
+</html>

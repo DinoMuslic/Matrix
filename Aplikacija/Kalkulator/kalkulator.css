@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --text: #3bba9c;
+    --text-hover: white;
+
+    --red1: 4;
+    --kolona1: 3;
+
+    --red2: 4;
+    --kolona2: 3;
+
+    --box-shadow: 10px 10px rgb(30, 44, 56);
+
+    --header-background-color: rgba(37, 39, 56, 0.702);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html { scroll-behavior: smooth;}
+
+body {
+    background-color: #2e3047;
+    
+    font-family: 'Quicksand', sans-serif;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+#header {
+    color: var(--text);
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-background-color);
+    width: 100vw; 
+    height: 10vh;
+    padding: 0 2%;
+    /*position: fixed*/;
+    top: 0;
+}
+
+#krug {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    float: right;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: #616276;
+    background-color: var(--text);
+    z-index: 200;
+}
+
+
+#krug:hover {
+    color: var(--text-hover);
+}
+
+input {
+    color: white;
+    font-size: large;
+    font-weight: normal;
+    text-align: center;
+    width: 55px;
+    height: 30px;
+    background-color: #5B6381;
+    border: 2px solid white;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.strelica {
+    color: var(--text);
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.strelica:hover {
+    transform: scale(1.2);
+}
+
+.naslov-odabir {
+    color: var(--text);
+    display: inline-block;
+    background-color: rgba(116, 175, 233, 0.3);
+    min-width: 25%;
+    z-index: 1;
+    height: fit-content;
+    padding-bottom: 1%;
+}
+
+.naslovMatrice {
+    color: var(--text);
+    background-color: rgba(31, 46, 59, 0.5);
+    font-size: 1.7em;
+    font-weight: 500;
+    margin-bottom: 15%;
+}
+
+@keyframes animacija-naslov-odabir1 {
+    from {
+        border-radius: 0;
+        box-shadow: none;
+    }
+    to {
+        border-radius: 20px;
+        box-shadow: var(--box-shadow);
+    }
+}
+
+
+@keyframes animacija-naslov-odabir2 {
+    from {
+        border-radius: 20px;
+        box-shadow: var(--box-shadow);
+    }
+    to {
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+@keyframes animacija-naslov1 {
+    from {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    to {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
+
+@keyframes animacija-naslov2 {
+    from {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    to {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+}
+
+.kontejner-strelice {
+    display: grid;
+}
+
+.red-kolona {
+    display: flex;
+    width: 120%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.duzina, .sirina, .duzina:focus, .sirina:focus {
+    width: 60px;
+    height: 40px;
+}
+
+.grid {
+    font-size: 1.3em;
+    font-weight: 500;
+    display: grid;
+    grid-gap: 15px;
+}
+
+#mjesto-za-matrice {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#centar {
+    margin-top: 5%;
+    height: 90vh;
+    display: grid;
+    place-items: center;
+    margin-bottom: 5%;
+}
+
+.centar-matrice {
+    display: grid;
+    place-items: center;
+    padding: 0 10px;
+}
+
+.centar-operacije {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width: 30%;
+}
+
+.matrica {
+    width: fit-content;
+    display: grid;
+    place-items: center;
+    grid-gap: 0.4em;
+}
+
+#matrica1 {
+    grid-template-columns: repeat(var(--kolona1), 1fr); 
+    grid-template-rows: repeat(var(--red1), 1fr);
+}
+
+#matrica2 {
+    grid-template-columns: repeat(var(--kolona2), 1fr); 
+    grid-template-rows: repeat(var(--red2), 1fr);
+}
+
+.input-matrice {
+    background-color: #5b6381;
+}
+
+.input-matrice-svijetli {
+    color: black;
+    background-color: #acbcff;
+    border: 2px solid black;
+}
+
+.input-matrice:focus {
+    background-color: #545a72;
+    border-radius: 5px;
+}
+
+.dugmici {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    font-size: 1.1em;
+    min-width: 5.5em;
+    color: var(--text);
+    background-color: transparent;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 2%;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgba(116, 175, 233, 0.3);
+    color: var(--text);
+    border: 1px solid white;
+}
+
+.operacije {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    place-items: center;
+    justify-content: space-around;
+}
+
+.op-btn {
+    cursor: pointer;
+    width: 20%;
+    height: 15%;
+    color: var(--text);
+    background-color: transparent;
+    font-size: 1.5em;
+    border: 2px solid var(--text);
+}
+
+
+#zamjena {
+    width: 25%;
+}
+
+@keyframes animacija-op-btn1 {
+    from {
+        color: var(--text);
+        background-color: transparent;
+        border: 2px solid var(--text);
+    }
+    to {
+        background-color: var(--text);
+        color: #2e3047;
+        border: 2px solid var(--text);
+    }
+}
+
+@keyframes animacija-op-btn2 {
+    from {
+        background-color: var(--text);
+        color: #2e3047;;
+        border: 2px solid var(--text);
+    }
+    to {
+        color: var(--text);
+        background-color: transparent;
+        border: 2px solid var(--text);
+    }
+}
+
+@keyframes animacija-op-btn3 {
+    from{
+        color: var(--text);
+        background-color: transparent;
+        border: 2px solid var(--text);
+    }
+    to {
+        background-color: var(--text);
+        color: #C2D7F0;
+        
+    }
+}
+
+@keyframes animacija-op-btn4 {
+    from{
+        background-color: var(--text);
+        color: #C2D7F0;
+    }
+    to {
+        color: var(--text);
+        background-color: transparent;
+        border: 2px solid var(--text);
+    }
+}
+
+.determinanta-inverzna {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#id1 {
+    opacity: 0;
+    color: rgba(245, 67, 67, 0.801);
+    font-size: 1.9rem;
+    width: fit-content;
+    margin-left: 3%;
+}
+
+#id2 {
+    opacity: 0;
+    color: rgba(245, 67, 67, 0.801);
+    font-size: 1.9rem;
+    width: fit-content;
+    margin-right: 3%;
+}
+
+@keyframes animacija-ispis1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animacija-ispis2 {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.rez {
+    opacity: 0;
+    min-width: 50%;
+    height: fit-content;
+    min-height: 50%;
+    background-color: rgba(54, 57, 82, 0.315);
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    transition: opacity 3s;
+}
+
+.naslov-rez {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    background-color: var(--header-background-color);
+    font-size: 2em;
+    color: var(--text);
+    margin-bottom: 10%;
+}
+
+.rezultati {
+    opacity: 0;
+    width: fit-content;
+    display: grid;
+    place-items: center;
+    grid-gap: 0.4em;
+    margin: 5px 15px;
+}
+
+.obrisi-rez {
+    font-size: 1em;
+    color: var(--text);
+    background-color: transparent;
+    border: 1px solid var(--text);
+    cursor: pointer;
+    width: 125px;
+    height: 25px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.obrisi-rez:hover {
+    background-color: rgba(255, 255, 255, 0.055);
+}
+
+.error {
+    font-size: 2em;
+    color: rgba(245, 67, 67, 0.801);
+}
+
+#nazad:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.inverzna {
+    display: flex;
+}
+.inverznaOkvir {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media only screen and (max-width: 1375px) {
+    .dugmici {
+        font-size: small;
+    }
+    .operacije {
+        font-size: small;
+    }
+
+    .input-matrice {
+        width: 45px;
+        height: 30px;
+    }
+
+    .input-matrice-svijetli {
+        width: 45px;
+        height: 30px;
+    }
+    .duzina, .sirina {
+        width: 50px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 1170px) {
+    .dugmici {
+        font-size: x-small;
+    }
+    .operacije {
+        font-size: x-small;
+    }
+    .input-matrice {
+        width: 30px;
+        height: 25px;
+    }
+
+    .input-matrice-svijetli {
+        width: 30px;
+        height: 25px;
+    }
+
+    .duzina, .sirina {
+        width: 50px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .dugmici {
+        font-size: xx-small;
+    }
+    .operacije {
+        font-size: xx-small;
+    }
+    .input-matrice {
+        width: 25px;
+        height: 20px;
+    }
+    .input-matrice-svijetli {
+        width: 25px;
+        height: 20px;
+    }
+
+    .duzina, .sirina {
+        width: 50px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #header {
+        font-size: 28px;
+    }
+
+    .input-matrice {
+        width: 35px;
+        height: 20px;
+        font-size: small;
+    }
+    .input-matrice-svijetli {
+        width: 35px;
+        height: 20px;
+        font-size: small;
+    }
+
+    .flex {
+        font-size: small;
+    }
+
+    .strelica {
+        width: 15px;
+        height: 15px;
+    }
+
+    #mjesto-za-matrice {
+        flex-direction: column;
+    }
+
+    .duzina, .sirina {
+        width: 50px;
+        height: 30px;
+    }
+}
+

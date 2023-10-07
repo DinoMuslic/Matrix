@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;;
+}
+
+html {scroll-behavior: smooth;}
+
+body{
+  background-color: #2e3047;
+}
+
+.kontejner {
+  display: flex;
+  position: relative;
+}
+
+.kontejner .nav{
+  width: 200px;
+  height: 100%;
+  background: #191c38;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.kontejner .nav h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.kontejner .nav ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.kontejner .nav ul li a{
+  color: #bdb8d7;
+  display: block;
+}
+
+.kontejner .nav ul li a .fas{
+  width: 25px;
+}
+
+.kontejner .nav ul li:hover{
+  background-color: #252a52;
+}
+    
+.kontejner .nav ul li:hover a{
+  color: #fff;
+}
+ 
+.kontejner .nav .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.kontejner .nav .social_media a{
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.kontejner .glavno{
+  width: 100%;
+  margin-left: 200px;
+}
+
+.glavno {
+  font-size: 18px;
+}
+
+.kontejner .glavno .header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  background: rgba(37, 39, 56, 0.702);
+  color: #319b82;
+  font-weight: bold;
+  border-bottom: 1px solid #e0e4e8;
+  font-size: 32px;
+}
+
+.kontejner .glavno .info{
+  margin: 20px;
+  color: #3bba9c;
+  line-height: 25px;
+}
+
+.kontejner .glavno .info div{
+  margin-bottom: 20px;
+}
+
+@media (max-height: 500px){
+  .social_media{
+    display: none !important;
+  }
+}
+
+#matrica {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.matrica {
+  position: relative;
+}
+.matrica:before, .matrica:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 3px solid #000;
+  width: 6px;
+  height: 100%;
+}
+.matrica:before {
+  left: -6px;
+  border-right: 0;
+}
+.matrica:after {
+  right: -6px;
+  border-left: 0;
+}
+
+td {
+  padding: 10px;
+}
+
+#ha2 {
+  color: #319b82;
+  font-weight: bold;
+}
+
+#znak, #jednako {
+  color: black;
+  margin: 0 50px;
+  font-size: 50px;
+}
+
+#formula {
+  color: rgb(240, 236, 4);
+  font-size: 20px;
+}
+
+@keyframes animacija1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.brojp {
+  height: fit-content;
+  position: absolute;
+  font-size: 22px;
+  animation: animacijaBrojevi linear 3s infinite;
+}
+
+.brojn {
+  height: fit-content;
+  position: absolute;
+  font-size: 22px;
+  animation: animacijaBrojevi2 linear 3s infinite;
+}
+
+#jedan {
+  left: 96%;
+  top: 5%;
+  color: #02AFAE;
+}
+
+#dva {
+  left: 94%;
+  top: 30%;
+  color: #0165B9;
+}
+
+#tri {
+  left: 97.7%;
+  top: 37%;
+  color: #0165B9;
+}
+
+#cetiri {
+  left: 94.5%;
+  top: 60%;
+  color: #1B3D9F;
+}
+
+#pet {
+  left: 97%;
+  top: 66%;
+  color: #8366B4;
+}
+
+@keyframes animacijaBrojevi {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes animacijaBrojevi2 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}

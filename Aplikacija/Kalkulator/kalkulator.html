@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kalkulator.css">
+    <link rel="shortcut icon" href="../ico/mat.ico" type="image/x-icon">
+    <title>Matrice | Kalkulator</title>
+</head>
+<body>
+    <div id="header">
+        <div id="nazad"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 8 8 12 12 16"></polyline><line x1="16" y1="12" x2="8" y2="12"></line></svg></div>
+        <div id="naslov-header">KALKULATOR</div>
+        <div id="krug"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></div>
+
+    </div>
+    <div id="centar">
+        <div id="mjesto-za-matrice">
+            <div class="naslov-odabir" id="naslov-odabir1">
+                <center><div class="naslovMatrice" id="naslovMatrice1">Matrica A</div></center>
+                <div class="flex">
+                    <div class="grid">
+                        <div>RED</div>
+                        <div class="red-kolona">
+                            <input readonly id="duzina1" class="duzina" type="number">
+                
+                            <div class="kontejner-strelice">
+                                <svg id="strelica-gore1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="strelica"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                
+                                <svg id="strelica-dole1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="strelica"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                            </div> 
+                        </div>
+                    </div>
+        
+                    <div class="grid">
+                        <div>KOLONA</div>
+                        <div class="red-kolona">
+                            <input readonly id="sirina1" class="sirina" type="number">
+            
+                            <div class="kontejner-strelice">
+                                <svg id="strelica-lijevo1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="strelica"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    
+                                <svg id="strelica-desno1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="strelica"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="centar-matrice" id="cm1">
+                    <div id="matrica1" class="matrica">
+
+                    </div>
+                </div>
+                <br><br>
+                <div class="dugmici">
+                    <button class="btn" id="sve-01">0</button>
+                    <button class="btn" id="sve-11">1</button>
+                    <button class="btn" id="random1">random</button>
+                </div>
+                <br><br>
+
+                <div class="dugmici">
+                    <button class="btn" id="transponuj1">transponuj</button>
+                    <button class="btn" id="determinanta1">determinanta</button>
+                    <button class="btn" id="obrisi1">obriši</button>
+                </div>
+            </div>
+            
+            <div class="centar-operacije">
+                <div class="operacije">
+                    <button class="op-btn" id="plus">A + B</button>
+                    <button class="op-btn" id="minus">A - B</button>
+                    <button class="op-btn" id="pomnozeno">A x B</button>
+                    <button class="op-btn" id="zamjena">A &larr; &rarr; B</button>
+                </div>
+                <div class="rez">
+                    <button class="obrisi-rez">OBRIŠI</button>
+                    <div class="rezultati">
+                    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="naslov-odabir" id="naslov-odabir2">
+                <center><div class="naslovMatrice" id="naslovMatrice2">Matrica B</div></center>
+                <div class="flex">
+                    <div class="grid">
+                        <div>RED</div>
+                        <div class="red-kolona">
+                            <input readonly id="duzina2" class="duzina" type="number">
+                
+                            <div class="kontejner-strelice">
+                                <svg id="strelica-gore2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="strelica"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                
+                                <svg id="strelica-dole2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="strelica"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                            </div> 
+                        </div>
+                    </div>
+        
+                    <div class="grid">
+                        <div>KOLONA</div>
+                        <div class="red-kolona">
+                            <input readonly id="sirina2" class="sirina" type="number">
+            
+                            <div class="kontejner-strelice">
+                                <svg id="strelica-lijevo2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="strelica"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    
+                                <svg id="strelica-desno2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="strelica"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="centar-matrice">
+                    <div id="matrica2" class="matrica">
+
+                    </div>
+                </div>
+                <br><br>
+                <div class="dugmici">
+                    <button class="btn" id="sve-02">0</button>
+                    <button class="btn" id="sve-12">1</button>
+                    <button class="btn" id="random2">random</button>
+                </div>
+                <br><br>
+
+                <div class="dugmici">
+                    <button class="btn" id="transponuj2">transponuj</button>
+                    <button class="btn" id="determinanta2">determinanta</button>
+                    <button class="btn" id="obrisi2">obriši</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="determinanta-inverzna"> 
+            <div id="id1"></div>
+            <div id="id2"></div>
+        </div>
+        
+        <div class="errori">
+
+        </div>
+    </div>
+    <script src="kalkulator.js" type="module"></script>
+</body>
+</html>
